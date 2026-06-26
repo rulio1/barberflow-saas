@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LandingPage from './pages/LandingPage.vue'
 import ClientScheduling from './pages/ClientScheduling.vue'
+import LoginPage from './pages/LoginPage.vue'
+import RegisterPage from './pages/RegisterPage.vue'
+import DemoPage from './pages/DemoPage.vue'
+import ContactPage from './pages/ContactPage.vue'
 
 const routes = [
   {
@@ -17,6 +21,26 @@ const routes = [
     path: '/:barbershopName',
     name: 'BarbershopScheduling',
     component: ClientScheduling
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: LoginPage
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: RegisterPage
+  },
+  {
+    path: '/demo',
+    name: 'Demo',
+    component: DemoPage
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: ContactPage
   }
 ]
 

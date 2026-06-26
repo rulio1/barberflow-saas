@@ -11,27 +11,106 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
+  .glassmorphism-light {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .glassmorphism-neon {
+    background: rgba(34, 197, 94, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
   .neon-glow {
     box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .neon-glow:hover {
-    box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
+    transform: translateY(-2px);
   }
 
   .amber-glow {
     box-shadow: 0 0 10px rgba(255, 191, 64, 0.2);
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .amber-glow:hover {
-    box-shadow: 0 0 20px rgba(255, 191, 64, 0.3);
+    box-shadow: 0 0 25px rgba(255, 191, 64, 0.4);
+    transform: translateY(-2px);
   }
 
   .focus-glow:focus {
     outline: none;
     border-color: #22c55e;
     box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+  }
+
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  .hover-glide {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .hover-glide:hover {
+    transform: translateX(10px);
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .gradient-text {
+    background: linear-gradient(45deg, #22c55e, #ffbf40);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-glow {
+    position: relative;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
+  .border-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    border-radius: inherit;
+    z-index: -1;
+    pointer-events: none;
+    animation: border-pulse 3s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.7);
+  }
+}
+
+@keyframes border-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
   }
 }

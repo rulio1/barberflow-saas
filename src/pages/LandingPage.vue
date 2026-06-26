@@ -13,44 +13,60 @@
       <!-- Navigation -->
       <nav class="absolute top-0 left-0 right-0 z-50">
         <div class="container mx-auto px-4 py-6">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-              <div class="w-12 h-12 bg-amber-glow-500 rounded-lg flex items-center justify-center">
-                <span class="text-white font-bold text-xl">B</span>
+          <div class="glassmorphism-light rounded-xl p-4 border border-graphite-700/50">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-amber-glow-500 rounded-lg flex items-center justify-center hover-scale">
+                  <span class="text-white font-bold text-xl">B</span>
+                </div>
+                <div>
+                  <h1 class="text-xl font-semibold gradient-text">BarberFlow</h1>
+                  <p class="text-sm text-graphite-400">SaaS para Barbearias</p>
+                </div>
               </div>
-              <div>
-                <h1 class="text-xl font-semibold">BarberFlow</h1>
-                <p class="text-sm text-graphite-400">Agendamento Premium</p>
+              <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Recursos</a>
+                <a href="#pricing" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Preços</a>
+                <a href="#testimonials" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Depoimentos</a>
+                <a href="#contact" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Contato</a>
+              </div>
+              <div class="flex space-x-3">
+                <router-link to="/login"
+                             class="px-4 py-2 text-graphite-200 hover:text-neon-green-400 transition-colors hover-scale">
+                  Entrar
+                </router-link>
+                <router-link to="/register"
+                             class="px-6 py-2 bg-neon-green-500 text-white rounded-lg font-semibold hover:bg-neon-green-600 transition-colors hover-scale neon-glow">
+                  Cadastre sua Barbearia
+                </router-link>
               </div>
             </div>
-            <div class="hidden md:flex items-center space-x-8">
-              <a href="#services" class="text-graphite-200 hover:text-neon-green-400 transition-colors">Serviços</a>
-              <a href="#barbers" class="text-graphite-200 hover:text-neon-green-400 transition-colors">Barbeiros</a>
-              <a href="#about" class="text-graphite-200 hover:text-neon-green-400 transition-colors">Sobre</a>
-              <a href="#contact" class="text-graphite-200 hover:text-neon-green-400 transition-colors">Contato</a>
-            </div>
-            <router-link to="/agendamento"
-                         class="px-6 py-2 bg-neon-green-500 text-white rounded-lg font-semibold hover:bg-neon-green-600 transition-colors">
-              Agendar Agora
-            </router-link>
           </div>
         </div>
       </nav>
 
       <!-- Hero Content -->
       <div class="relative z-10 text-center px-4">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          Experiência Premium de<br>
-          <span class="text-neon-green-400">Barbearia</span>
-        </h1>
-        <p class="text-xl md:text-2xl text-graphite-300 mb-8 max-w-2xl mx-auto">
-          Agende seu horário com os melhores profissionais<br>
-          e desfrute de um atendimento exclusivo
-        </p>
-        <router-link to="/agendamento"
-                     class="inline-block px-8 py-4 bg-amber-glow-500 text-white rounded-lg font-semibold text-lg hover:bg-amber-glow-600 transition-colors transform hover:scale-105">
-          Agendar Horário
-        </router-link>
+        <div class="glassmorphism-light rounded-2xl p-8 mb-8 max-w-4xl mx-auto border border-graphite-700/30">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Plataforma Completa para<br>
+            <span class="gradient-text">Sua Barbearia</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-graphite-300 mb-8 max-w-3xl mx-auto">
+            Gerencie agendamentos, clientes e serviços com facilidade.<br>
+            A solução tudo-em-um para barbearias modernas.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <router-link to="/register"
+                         class="inline-block px-8 py-4 bg-amber-glow-500 text-white rounded-lg font-semibold text-lg hover:bg-amber-glow-600 transition-colors transform hover:scale-105 amber-glow">
+              Comece Grátis
+            </router-link>
+            <router-link to="/demo"
+                         class="inline-block px-8 py-4 bg-transparent border-2 border-neon-green-400 text-neon-green-400 rounded-lg font-semibold text-lg hover:bg-neon-green-400 hover:text-graphite-950 transition-colors neon-glow">
+              Ver Demo
+            </router-link>
+          </div>
+        </div>
       </div>
 
       <!-- Scroll Down Indicator -->
@@ -61,254 +77,350 @@
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-graphite-900/30">
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-graphite-900/30">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-          <span class="text-neon-green-400 font-medium text-sm uppercase tracking-wider">Nossos Serviços</span>
-          <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">O que oferecemos</h2>
-          <p class="text-graphite-400 max-w-2xl mx-auto">
-            Serviços profissionais com produtos premium e técnicas avançadas para um resultado impecável.
+          <span class="text-neon-green-400 font-medium text-sm uppercase tracking-wider">Recursos</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">Tudo que você precisa para sua barbearia</h2>
+          <p class="text-graphite-400 max-w-3xl mx-auto">
+            Uma plataforma completa com todas as ferramentas para gerenciar sua barbearia com eficiência e profissionalismo.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Service Card 1 -->
-          <div class="bg-graphite-800 rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700 hover:border-neon-green-500">
+          <!-- Feature 1 -->
+          <div class="glassmorphism-light rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700/30 hover:border-neon-green-500 hover-scale">
             <div class="w-16 h-16 bg-neon-green-500/20 rounded-xl flex items-center justify-center mb-6">
               <svg class="w-8 h-8 text-neon-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-4">Corte de Cabelo</h3>
-            <p class="text-graphite-400 mb-6">Cortes modernos e clássicos com acabamento premium e atenção aos detalhes.</p>
+            <h3 class="text-xl font-semibold mb-4 gradient-text">Agendamento Online</h3>
+            <p class="text-graphite-400 mb-6">Sistema de agendamento 24/7 com confirmação automática e lembretes por SMS/email.</p>
             <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-amber-glow-400">R$ 50,00</span>
-              <span class="text-sm text-graphite-500">30 min</span>
+              <span class="text-sm text-graphite-500">Integração com Google Calendar</span>
             </div>
           </div>
 
-          <!-- Service Card 2 -->
-          <div class="bg-graphite-800 rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700 hover:border-neon-green-500">
+          <!-- Feature 2 -->
+          <div class="glassmorphism-light rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700/30 hover:border-neon-green-500 hover-scale">
             <div class="w-16 h-16 bg-neon-green-500/20 rounded-xl flex items-center justify-center mb-6">
               <svg class="w-8 h-8 text-neon-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-4">Barba Completa</h3>
-            <p class="text-graphite-400 mb-6">Modelagem e tratamento de barba com produtos premium para um visual impecável.</p>
+            <h3 class="text-xl font-semibold mb-4 gradient-text">Gerenciamento de Clientes</h3>
+            <p class="text-graphite-400 mb-6">Cadastro completo de clientes com histórico de serviços, preferências e fidelização.</p>
             <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-amber-glow-400">R$ 40,00</span>
-              <span class="text-sm text-graphite-500">25 min</span>
+              <span class="text-sm text-graphite-500">Perfis personalizados</span>
             </div>
           </div>
 
-          <!-- Service Card 3 -->
-          <div class="bg-graphite-800 rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700 hover:border-neon-green-500">
+          <!-- Feature 3 -->
+          <div class="glassmorphism-light rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700/30 hover:border-neon-green-500 hover-scale">
+            <div class="w-16 h-16 bg-neon-green-500/20 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-neon-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 gradient-text">Controle Financeiro</h3>
+            <p class="text-graphite-400 mb-6">Acompanhamento de receitas, comissões de barbeiros e relatórios detalhados.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-graphite-500">Integração com pagamentos</span>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="glassmorphism-light rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700/30 hover:border-neon-green-500 hover-scale">
             <div class="w-16 h-16 bg-neon-green-500/20 rounded-xl flex items-center justify-center mb-6">
               <svg class="w-8 h-8 text-neon-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-4">Corte + Barba</h3>
-            <p class="text-graphite-400 mb-6">Pacote completo com corte de cabelo e modelagem de barba com desconto especial.</p>
+            <h3 class="text-xl font-semibold mb-4 gradient-text">Marketing Integrado</h3>
+            <p class="text-graphite-400 mb-6">Ferramentas de marketing por email e SMS para promover sua barbearia e fidelizar clientes.</p>
             <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-amber-glow-400">R$ 85,00</span>
-              <span class="text-sm text-graphite-500">55 min</span>
+              <span class="text-sm text-graphite-500">Campanhas automatizadas</span>
             </div>
           </div>
 
-          <!-- Service Card 4 -->
-          <div class="bg-graphite-800 rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700 hover:border-neon-green-500">
+          <!-- Feature 5 -->
+          <div class="glassmorphism-light rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700/30 hover:border-neon-green-500 hover-scale">
             <div class="w-16 h-16 bg-neon-green-500/20 rounded-xl flex items-center justify-center mb-6">
               <svg class="w-8 h-8 text-neon-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-4">Sobrancelha</h3>
-            <p class="text-graphite-400 mb-6">Design e limpeza de sobrancelhas para um visual harmonioso e natural.</p>
+            <h3 class="text-xl font-semibold mb-4 gradient-text">Página Personalizada</h3>
+            <p class="text-graphite-400 mb-6">Sua barbearia com página profissional personalizável e domínio próprio.</p>
             <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-amber-glow-400">R$ 25,00</span>
-              <span class="text-sm text-graphite-500">15 min</span>
+              <span class="text-sm text-graphite-500">Design responsivo</span>
             </div>
           </div>
 
-          <!-- Service Card 5 -->
-          <div class="bg-graphite-800 rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700 hover:border-neon-green-500">
+          <!-- Feature 6 -->
+          <div class="glassmorphism-light rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700/30 hover:border-neon-green-500 hover-scale">
             <div class="w-16 h-16 bg-neon-green-500/20 rounded-xl flex items-center justify-center mb-6">
               <svg class="w-8 h-8 text-neon-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-4">Tratamento Capilar</h3>
-            <p class="text-graphite-400 mb-6">Hidratação profunda e tratamento para cabelos saudáveis e brilhantes.</p>
+            <h3 class="text-xl font-semibold mb-4 gradient-text">Relatórios Avançados</h3>
+            <p class="text-graphite-400 mb-6">Dashboard com analytics e insights para tomar decisões baseadas em dados.</p>
             <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-amber-glow-400">R$ 65,00</span>
-              <span class="text-sm text-graphite-500">40 min</span>
-            </div>
-          </div>
-
-          <!-- Service Card 6 -->
-          <div class="bg-graphite-800 rounded-xl p-8 hover:bg-graphite-700 transition-all duration-300 border border-graphite-700 hover:border-neon-green-500">
-            <div class="w-16 h-16 bg-neon-green-500/20 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-8 h-8 text-neon-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">Corte Infantil</h3>
-            <p class="text-graphite-400 mb-6">Corte especial para crianças com ambiente descontraído e atendimento cuidadoso.</p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-amber-glow-400">R$ 35,00</span>
-              <span class="text-sm text-graphite-500">20 min</span>
+              <span class="text-sm text-graphite-500">Exportação de dados</span>
             </div>
           </div>
         </div>
 
         <div class="text-center mt-12">
-          <router-link to="/agendamento"
-                       class="inline-block px-8 py-3 bg-neon-green-500 text-white rounded-lg font-semibold hover:bg-neon-green-600 transition-colors">
-            Agendar Serviço
+          <router-link to="/register"
+                       class="inline-block px-8 py-3 bg-amber-glow-500 text-white rounded-lg font-semibold hover:bg-amber-glow-600 transition-colors">
+            Experimentar Todos os Recursos
           </router-link>
         </div>
       </div>
     </section>
 
-    <!-- Barbers Section -->
-    <section id="barbers" class="py-20">
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-          <span class="text-neon-green-400 font-medium text-sm uppercase tracking-wider">Nossa Equipe</span>
-          <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">Conheça nossos barbeiros</h2>
-          <p class="text-graphite-400 max-w-2xl mx-auto">
-            Profissionais altamente qualificados com anos de experiência e paixão pelo que fazem.
+          <span class="text-neon-green-400 font-medium text-sm uppercase tracking-wider">Planos</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">Escolha o plano ideal para sua barbearia</h2>
+          <p class="text-graphite-400 max-w-3xl mx-auto">
+            Planos flexíveis que crescem com o seu negócio. Sem contratos de longo prazo, cancele quando quiser.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Barber 1 -->
-          <div class="text-center">
-            <div class="w-full h-80 rounded-xl overflow-hidden mb-6 group">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg"
-                   alt="Carlos Silva - Especialista em fades"
-                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Basic Plan -->
+          <div class="glassmorphism-light rounded-xl p-8 border border-graphite-700/30 flex flex-col hover-scale">
+            <h3 class="text-2xl font-bold mb-2 gradient-text">Básico</h3>
+            <p class="text-graphite-400 mb-6">Perfeito para barbearias iniciantes</p>
+            <div class="mb-8">
+              <span class="text-4xl font-bold text-amber-glow-400">R$ 99</span>
+              <span class="text-graphite-400">/mês</span>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Carlos Silva</h3>
-            <p class="text-neon-green-400 text-sm font-medium mb-2">Especialista em fades</p>
-            <p class="text-graphite-400 text-sm mb-4">10+ anos de experiência em cortes modernos e técnicas avançadas.</p>
-            <div class="flex justify-center items-center">
-              <span class="text-amber-glow-400 mr-1">★</span>
-              <span class="text-sm">4.9</span>
-            </div>
+
+            <ul class="space-y-4 mb-8 flex-grow">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Até 50 agendamentos/mês</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>1 barbeiro cadastrado</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Agendamento online</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Gerenciamento de clientes</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Relatórios básicos</span>
+              </li>
+            </ul>
+
+            <router-link to="/register"
+                         class="w-full text-center px-6 py-3 bg-graphite-700 text-white rounded-lg font-semibold hover:bg-graphite-600 transition-colors neon-glow">
+              Começar Agora
+            </router-link>
           </div>
 
-          <!-- Barber 2 -->
-          <div class="text-center">
-            <div class="w-full h-80 rounded-xl overflow-hidden mb-6 group">
-              <img src="https://randomuser.me/api/portraits/men/33.jpg"
-                   alt="Marcos Oliveira - Barbas artísticas"
-                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <!-- Pro Plan (Popular) -->
+          <div class="glassmorphism-neon rounded-xl p-8 border-2 border-neon-green-500 flex flex-col relative hover-scale">
+            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+              <span class="bg-neon-green-500 text-graphite-950 px-4 py-1 rounded-full text-sm font-semibold pulse-glow">Mais Popular</span>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Marcos Oliveira</h3>
-            <p class="text-neon-green-400 text-sm font-medium mb-2">Barbas artísticas</p>
-            <p class="text-graphite-400 text-sm mb-4">Mestre em design de barba e estilos personalizados.</p>
-            <div class="flex justify-center items-center">
-              <span class="text-amber-glow-400 mr-1">★</span>
-              <span class="text-sm">4.8</span>
+            <h3 class="text-2xl font-bold mb-2 gradient-text">Profissional</h3>
+            <p class="text-graphite-400 mb-6">Para barbearias em crescimento</p>
+            <div class="mb-8">
+              <span class="text-4xl font-bold text-amber-glow-400">R$ 199</span>
+              <span class="text-graphite-400">/mês</span>
             </div>
+
+            <ul class="space-y-4 mb-8 flex-grow">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Agendamentos ilimitados</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Até 5 barbeiros</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Página personalizada</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Marketing por email</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Relatórios avançados</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Integração com pagamentos</span>
+              </li>
+            </ul>
+
+            <router-link to="/register"
+                         class="w-full text-center px-6 py-3 bg-amber-glow-500 text-white rounded-lg font-semibold hover:bg-amber-glow-600 transition-colors amber-glow">
+              Escolher Plano Pro
+            </router-link>
           </div>
 
-          <!-- Barber 3 -->
-          <div class="text-center">
-            <div class="w-full h-80 rounded-xl overflow-hidden mb-6 group">
-              <img src="https://randomuser.me/api/portraits/men/34.jpg"
-                   alt="Rafael Souza - Cortes modernos"
-                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <!-- Enterprise Plan -->
+          <div class="glassmorphism-light rounded-xl p-8 border border-graphite-700/30 flex flex-col hover-scale">
+            <h3 class="text-2xl font-bold mb-2 gradient-text">Enterprise</h3>
+            <p class="text-graphite-400 mb-6">Para redes de barbearias</p>
+            <div class="mb-8">
+              <span class="text-4xl font-bold text-amber-glow-400">R$ 399</span>
+              <span class="text-graphite-400">/mês</span>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Rafael Souza</h3>
-            <p class="text-neon-green-400 text-sm font-medium mb-2">Cortes modernos</p>
-            <p class="text-graphite-400 text-sm mb-4">Especialista em tendências atuais e estilos inovadores.</p>
-            <div class="flex justify-center items-center">
-              <span class="text-amber-glow-400 mr-1">★</span>
-              <span class="text-sm">4.7</span>
-            </div>
-          </div>
 
-          <!-- Barber 4 -->
-          <div class="text-center">
-            <div class="w-full h-80 rounded-xl overflow-hidden mb-6 group">
-              <img src="https://randomuser.me/api/portraits/men/35.jpg"
-                   alt="Lucas Pereira - Estilo clássico"
-                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-            </div>
-            <h3 class="text-xl font-semibold mb-2">Lucas Pereira</h3>
-            <p class="text-neon-green-400 text-sm font-medium mb-2">Estilo clássico</p>
-            <p class="text-graphite-400 text-sm mb-4">Expert em cortes tradicionais e técnicas refinadas.</p>
-            <div class="flex justify-center items-center">
-              <span class="text-amber-glow-400 mr-1">★</span>
-              <span class="text-sm">4.9</span>
-            </div>
+            <ul class="space-y-4 mb-8 flex-grow">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Tudo do plano Pro</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Barbeiros ilimitados</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Multi-unidades</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>API personalizada</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Suporte prioritário</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-neon-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Treinamento personalizado</span>
+              </li>
+            </ul>
+
+            <router-link to="/contact"
+                         class="w-full text-center px-6 py-3 bg-graphite-700 text-white rounded-lg font-semibold hover:bg-graphite-600 transition-colors border-glow">
+              Falar com Vendas
+            </router-link>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-graphite-900/30">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-graphite-900/30">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <span class="text-neon-green-400 font-medium text-sm uppercase tracking-wider">Sobre Nós</span>
-            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">BarberFlow - Excelência em Barbearia</h2>
-            <p class="text-graphite-400 mb-6">
-              Fundada em 2018, a BarberFlow nasceu com a missão de elevar a experiência de barbearia a um novo patamar.
-              Combinamos técnicas tradicionais com inovação para oferecer serviços de alta qualidade.
-            </p>
-            <p class="text-graphite-400 mb-8">
-              Nosso espaço foi cuidadosamente projetado para proporcionar conforto e relaxamento,
-              com produtos premium e equipamentos de última geração.
-            </p>
-            <div class="grid grid-cols-2 gap-6">
-              <div class="flex items-center">
-                <div class="w-8 h-8 bg-neon-green-500 rounded-full flex items-center justify-center mr-4">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                </div>
-                <span class="text-graphite-300">100% Satisfação Garantida</span>
-              </div>
-              <div class="flex items-center">
-                <div class="w-8 h-8 bg-neon-green-500 rounded-full flex items-center justify-center mr-4">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-                <span class="text-graphite-300">Produtos Premium</span>
-              </div>
-              <div class="flex items-center">
-                <div class="w-8 h-8 bg-neon-green-500 rounded-full flex items-center justify-center mr-4">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg>
-                </div>
-                <span class="text-graphite-300">Localização Privilegiada</span>
-              </div>
-              <div class="flex items-center">
-                <div class="w-8 h-8 bg-neon-green-500 rounded-full flex items-center justify-center mr-4">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                  </svg>
-                </div>
-                <span class="text-graphite-300">Agendamento Flexível</span>
+        <div class="text-center mb-16">
+          <span class="text-neon-green-400 font-medium text-sm uppercase tracking-wider">Depoimentos</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">O que nossos clientes dizem</h2>
+          <p class="text-graphite-400 max-w-3xl mx-auto">
+            Mais de 500 barbearias já transformaram seus negócios com o BarberFlow.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="glassmorphism-light rounded-xl p-8 border border-graphite-700/30 hover-scale">
+            <div class="flex items-center mb-6">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva"
+                   class="w-14 h-14 rounded-full mr-4 border-2 border-neon-green-400">
+              <div>
+                <h4 class="font-semibold gradient-text">Carlos Silva</h4>
+                <p class="text-sm text-neon-green-400">Barbearia Premium Cuts</p>
               </div>
             </div>
+            <p class="text-graphite-300 mb-6 italic">
+              "O BarberFlow revolucionou nossa barbearia. Conseguimos aumentar em 40% nossos agendamentos e reduzir as faltas em 70% com os lembretes automáticos."
+            </p>
+            <div class="flex text-amber-glow-400">
+              <span>★★★★★</span>
+            </div>
           </div>
-          <div class="relative">
-            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                 alt="Interior da barbearia BarberFlow"
-                 class="w-full h-96 object-cover rounded-xl">
-            <div class="absolute inset-0 bg-neon-green-500/10 rounded-xl"></div>
+
+          <!-- Testimonial 2 -->
+          <div class="glassmorphism-light rounded-xl p-8 border border-graphite-700/30 hover-scale">
+            <div class="flex items-center mb-6">
+              <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Marcos Oliveira"
+                   class="w-14 h-14 rounded-full mr-4 border-2 border-neon-green-400">
+              <div>
+                <h4 class="font-semibold gradient-text">Marcos Oliveira</h4>
+                <p class="text-sm text-neon-green-400">Barber Shop Elite</p>
+              </div>
+            </div>
+            <p class="text-graphite-300 mb-6 italic">
+              "A plataforma é incrível! Meus clientes adoram a facilidade de agendar online e eu adoro os relatórios financeiros que me ajudam a tomar melhores decisões."
+            </p>
+            <div class="flex text-amber-glow-400">
+              <span>★★★★★</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="glassmorphism-light rounded-xl p-8 border border-graphite-700/30 hover-scale">
+            <div class="flex items-center mb-6">
+              <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="Rafael Souza"
+                   class="w-14 h-14 rounded-full mr-4 border-2 border-neon-green-400">
+              <div>
+                <h4 class="font-semibold gradient-text">Rafael Souza</h4>
+                <p class="text-sm text-neon-green-400">The Gentleman's Club</p>
+              </div>
+            </div>
+            <p class="text-graphite-300 mb-6 italic">
+              "Desde que implementamos o BarberFlow, nossa produtividade aumentou significativamente. O gerenciamento de comissões dos barbeiros nunca foi tão fácil!"
+            </p>
+            <div class="flex text-amber-glow-400">
+              <span>★★★★★</span>
+            </div>
           </div>
         </div>
       </div>
@@ -320,25 +432,12 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <span class="text-neon-green-400 font-medium text-sm uppercase tracking-wider">Contato</span>
-            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">Entre em contato</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6">Fale com nossa equipe</h2>
             <p class="text-graphite-400 mb-8">
-              Estamos sempre prontos para atendê-lo. Entre em contato para agendamentos, dúvidas ou sugestões.
+              Estamos aqui para ajudar! Entre em contato para dúvidas, suporte ou para agendar uma demonstração personalizada.
             </p>
 
             <div class="space-y-6">
-              <div class="flex items-center">
-                <div class="w-12 h-12 bg-neon-green-500/20 rounded-full flex items-center justify-center mr-4">
-                  <svg class="w-6 h-6 text-neon-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold">Endereço</h3>
-                  <p class="text-graphite-400">Rua das Barbas, 123 - Centro<br>São Paulo, SP</p>
-                </div>
-              </div>
-
               <div class="flex items-center">
                 <div class="w-12 h-12 bg-neon-green-500/20 rounded-full flex items-center justify-center mr-4">
                   <svg class="w-6 h-6 text-neon-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -346,8 +445,12 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold">Telefone</h3>
-                  <p class="text-graphite-400">(11) 1234-5678<br>(11) 98765-4321</p>
+                  <h3 class="font-semibold">WhatsApp</h3>
+                  <p class="text-graphite-400">
+                    <a href="https://wa.me/5553997126656" class="text-neon-green-400 hover:text-neon-green-300 transition-colors">
+                      (53) 99712-6656
+                    </a>
+                  </p>
                 </div>
               </div>
 
@@ -365,16 +468,16 @@
             </div>
           </div>
 
-          <div class="bg-graphite-800 rounded-xl p-8">
-            <h3 class="text-xl font-semibold mb-6">Horário de Funcionamento</h3>
+          <div class="glassmorphism-light rounded-xl p-8 border border-graphite-700/30">
+            <h3 class="text-xl font-semibold mb-6 gradient-text">Horário de Atendimento</h3>
             <div class="space-y-4">
-              <div class="flex justify-between items-center py-3 border-b border-graphite-700">
+              <div class="flex justify-between items-center py-3 border-b border-graphite-700/50">
                 <span class="text-graphite-400">Segunda a Sexta</span>
-                <span class="font-medium">09:00 - 19:00</span>
+                <span class="font-medium">08:00 - 18:00</span>
               </div>
-              <div class="flex justify-between items-center py-3 border-b border-graphite-700">
+              <div class="flex justify-between items-center py-3 border-b border-graphite-700/50">
                 <span class="text-graphite-400">Sábado</span>
-                <span class="font-medium">09:00 - 16:00</span>
+                <span class="font-medium">09:00 - 13:00</span>
               </div>
               <div class="flex justify-between items-center py-3">
                 <span class="text-graphite-400">Domingo</span>
@@ -383,9 +486,9 @@
             </div>
 
             <div class="mt-8 text-center">
-              <router-link to="/agendamento"
-                           class="inline-block px-8 py-3 bg-amber-glow-500 text-white rounded-lg font-semibold hover:bg-amber-glow-600 transition-colors w-full">
-                Agendar Horário
+              <router-link to="/contact"
+                           class="inline-block px-8 py-3 bg-amber-glow-500 text-white rounded-lg font-semibold hover:bg-amber-glow-600 transition-colors w-full amber-glow">
+                Entrar em Contato
               </router-link>
             </div>
           </div>
@@ -404,20 +507,20 @@
               </div>
               <div>
                 <h3 class="text-lg font-semibold">BarberFlow</h3>
-                <p class="text-sm text-graphite-400">Agendamento Premium</p>
+                <p class="text-sm text-graphite-400">Plataforma SaaS para Barbearias</p>
               </div>
             </div>
             <p class="text-graphite-400 text-sm">
-              Transformando cortes de cabelo em experiências memoráveis desde 2018.
+              A solução completa para gerenciar e crescer sua barbearia desde 2023.
             </p>
           </div>
 
           <div>
             <h4 class="font-semibold mb-4">Links Rápidos</h4>
             <ul class="space-y-2">
-              <li><a href="#services" class="text-graphite-400 hover:text-neon-green-400 transition-colors text-sm">Serviços</a></li>
-              <li><a href="#barbers" class="text-graphite-400 hover:text-neon-green-400 transition-colors text-sm">Barbeiros</a></li>
-              <li><a href="#about" class="text-graphite-400 hover:text-neon-green-400 transition-colors text-sm">Sobre</a></li>
+              <li><a href="#features" class="text-graphite-400 hover:text-neon-green-400 transition-colors text-sm">Recursos</a></li>
+              <li><a href="#pricing" class="text-graphite-400 hover:text-neon-green-400 transition-colors text-sm">Preços</a></li>
+              <li><a href="#testimonials" class="text-graphite-400 hover:text-neon-green-400 transition-colors text-sm">Depoimentos</a></li>
               <li><a href="#contact" class="text-graphite-400 hover:text-neon-green-400 transition-colors text-sm">Contato</a></li>
             </ul>
           </div>
@@ -445,7 +548,7 @@
         </div>
 
         <div class="border-t border-graphite-800 pt-8 text-center">
-          <p class="text-graphite-500 text-sm">© 2023 BarberFlow. Todos os direitos reservados.</p>
+          <p class="text-graphite-500 text-sm">© 2026 BarberFlow. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
