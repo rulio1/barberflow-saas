@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+output/
+*.local
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+*.swp
+*.swo
+
+# Test coverage
+coverage/
+
+# Parcel
+.cache/
+dist/
+
+# Next.js
+.next/
+out/
+
+# Vue
+*.vue.js
+
+# Database
+*.sqlite
+*.sqlite-journal
+*.db
+
+# Backend specific
+backend/node_modules/
+backend/dist/
+backend/.env
+
+# Frontend specific
+pwa/node_modules/
+pwa/dist/
+admin/node_modules/
+admin/.next/
+landing/node_modules/
+landing/.next/
