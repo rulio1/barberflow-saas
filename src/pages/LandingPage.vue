@@ -10,61 +10,61 @@
         <div class="absolute inset-0 bg-graphite-950/70"></div>
       </div>
 
-      <!-- Navigation -->
-      <nav class="absolute top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-4 py-6">
-          <div class="glassmorphism-light rounded-xl p-4 border border-graphite-700/50">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 bg-amber-glow-500 rounded-lg flex items-center justify-center hover-scale">
-                  <span class="text-white font-bold text-xl">B</span>
+        <!-- Navigation -->
+        <nav class="absolute top-0 left-0 right-0 z-50">
+          <div class="container mx-auto px-4 py-4 md:py-6">
+            <div class="glassmorphism-light rounded-xl p-4 border border-graphite-700/50">
+              <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-3">
+                  <div class="w-12 h-12 bg-amber-glow-500 rounded-lg flex items-center justify-center hover-scale">
+                    <span class="text-white font-bold text-xl">B</span>
+                  </div>
+                  <div>
+                    <h1 class="text-xl font-semibold gradient-text">BarberFlow</h1>
+                    <p class="text-sm text-graphite-400">SaaS para Barbearias</p>
+                  </div>
                 </div>
-                <div>
-                  <h1 class="text-xl font-semibold gradient-text">BarberFlow</h1>
-                  <p class="text-sm text-graphite-400">SaaS para Barbearias</p>
+                <div class="hidden md:flex items-center space-x-8">
+                  <a href="#features" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Recursos</a>
+                  <a href="#pricing" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Preços</a>
+                  <a href="#testimonials" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Depoimentos</a>
+                  <a href="#contact" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Contato</a>
                 </div>
-              </div>
-              <div class="hidden md:flex items-center space-x-8">
-                <a href="#features" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Recursos</a>
-                <a href="#pricing" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Preços</a>
-                <a href="#testimonials" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Depoimentos</a>
-                <a href="#contact" class="text-graphite-200 hover:text-neon-green-400 transition-colors hover-glide">Contato</a>
-              </div>
-              <div class="flex space-x-3">
-                <router-link to="/login"
-                             class="px-4 py-2 text-graphite-200 hover:text-neon-green-400 transition-colors hover-scale">
-                  Entrar
-                </router-link>
-                <router-link to="/register"
-                             class="px-6 py-2 bg-neon-green-500 text-white rounded-lg font-semibold hover:bg-neon-green-600 transition-colors hover-scale neon-glow">
-                  Cadastre sua Barbearia
-                </router-link>
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3 w-full sm:w-auto">
+                  <button @click="openLoginModal"
+                          class="px-4 py-2 text-graphite-200 hover:text-neon-green-400 transition-colors hover-scale text-center">
+                    Entrar
+                  </button>
+                  <button @click="openRegisterModal"
+                          class="px-6 py-2 bg-neon-green-500 text-white rounded-lg font-semibold hover:bg-neon-green-600 transition-colors hover-scale neon-glow text-center">
+                    Cadastre sua Barbearia
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
 
       <!-- Hero Content -->
-      <div class="relative z-10 text-center px-4">
-        <div class="glassmorphism-light rounded-2xl p-8 mb-8 max-w-4xl mx-auto border border-graphite-700/30">
-          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+      <div class="relative z-10 text-center px-4 mt-24 md:mt-0">
+        <div class="glassmorphism-light rounded-2xl p-6 md:p-8 mb-8 max-w-4xl mx-auto border border-graphite-700/30">
+          <h1 class="text-3xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
             Plataforma Completa para<br>
             <span class="gradient-text">Sua Barbearia</span>
           </h1>
-          <p class="text-xl md:text-2xl text-graphite-300 mb-8 max-w-3xl mx-auto">
+          <p class="text-lg md:text-2xl text-graphite-300 mb-6 md:mb-8 max-w-3xl mx-auto">
             Gerencie agendamentos, clientes e serviços com facilidade.<br>
             A solução tudo-em-um para barbearias modernas.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <router-link to="/register"
-                         class="inline-block px-8 py-4 bg-amber-glow-500 text-white rounded-lg font-semibold text-lg hover:bg-amber-glow-600 transition-colors transform hover:scale-105 amber-glow">
+                         class="inline-block px-6 py-3 md:px-8 md:py-4 bg-amber-glow-500 text-white rounded-lg font-semibold text-base md:text-lg hover:bg-amber-glow-600 transition-colors transform hover:scale-105 amber-glow">
               Comece Grátis
             </router-link>
-            <router-link to="/demo"
-                         class="inline-block px-8 py-4 bg-transparent border-2 border-neon-green-400 text-neon-green-400 rounded-lg font-semibold text-lg hover:bg-neon-green-400 hover:text-graphite-950 transition-colors neon-glow">
+            <button @click="openDemoModal"
+                    class="inline-block px-6 py-3 md:px-8 md:py-4 bg-transparent border-2 border-neon-green-400 text-neon-green-400 rounded-lg font-semibold text-base md:text-lg hover:bg-neon-green-400 hover:text-graphite-950 transition-colors neon-glow">
               Ver Demo
-            </router-link>
+            </button>
           </div>
         </div>
       </div>
@@ -76,6 +76,215 @@
         </div>
       </div>
     </section>
+
+    <!-- Login Modal -->
+    <div v-if="showLoginModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm">
+      <div class="relative w-full max-w-md mx-4 bg-graphite-800/90 backdrop-blur-sm rounded-2xl p-8 border border-graphite-700">
+        <button @click="closeLoginModal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-graphite-400 hover:text-neon-green-400 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold mb-4">Bem-vindo de volta</h2>
+          <p class="text-graphite-400">Acesse sua conta para gerenciar sua barbearia</p>
+        </div>
+
+        <form @submit.prevent="handleLogin" class="space-y-6">
+          <div>
+            <label for="loginEmail" class="block text-sm font-medium mb-2">Email</label>
+            <input type="email" id="loginEmail" v-model="loginEmail"
+                   class="w-full px-4 py-3 bg-graphite-700 border border-graphite-600 rounded-lg focus:border-neon-green-500 focus:outline-none focus:ring-2 focus:ring-neon-green-500/20 transition-colors"
+                   placeholder="seu@email.com">
+          </div>
+
+          <div>
+            <label for="loginPassword" class="block text-sm font-medium mb-2">Senha</label>
+            <input type="password" id="loginPassword" v-model="loginPassword"
+                   class="w-full px-4 py-3 bg-graphite-700 border border-graphite-600 rounded-lg focus:border-neon-green-500 focus:outline-none focus:ring-2 focus:ring-neon-green-500/20 transition-colors"
+                   placeholder="••••••••">
+          </div>
+
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <input type="checkbox" id="loginRemember" v-model="loginRemember"
+                     class="w-4 h-4 text-neon-green-500 bg-graphite-700 border-graphite-600 rounded focus:ring-neon-green-500">
+              <label for="loginRemember" class="ml-2 text-sm text-graphite-400">Lembrar de mim</label>
+            </div>
+            <a href="#" class="text-sm text-neon-green-400 hover:underline">Esqueceu a senha?</a>
+          </div>
+
+          <button type="submit"
+                  class="w-full px-6 py-4 bg-amber-glow-500 text-white rounded-lg font-semibold text-lg hover:bg-amber-glow-600 transition-colors transform hover:scale-105">
+            Entrar
+          </button>
+
+          <div class="text-center text-sm text-graphite-400">
+            Não tem uma conta? <button @click="switchToRegister" class="text-neon-green-400 hover:underline font-medium">Cadastre-se</button>
+          </div>
+        </form>
+
+        <div class="mt-8 text-center">
+          <p class="text-sm text-graphite-500 mb-4">OU CONTINUE COM</p>
+          <div class="flex justify-center space-x-4">
+            <button class="w-12 h-12 bg-graphite-700 rounded-full flex items-center justify-center hover:bg-graphite-600 transition-colors">
+              <svg class="w-6 h-6 text-graphite-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.56 12.25c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </button>
+            <button class="w-12 h-12 bg-graphite-700 rounded-full flex items-center justify-center hover:bg-graphite-600 transition-colors">
+              <svg class="w-6 h-6 text-graphite-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo Modal -->
+    <div v-if="showDemoModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm">
+      <div class="relative w-full max-w-4xl mx-4 bg-graphite-800/90 backdrop-blur-sm rounded-2xl p-8 border border-graphite-700">
+        <button @click="closeDemoModal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-graphite-400 hover:text-neon-green-400 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold mb-4">Demo Interativa do BarberFlow</h2>
+          <p class="text-graphite-400">Explore os recursos da nossa plataforma sem necessidade de cadastro</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <!-- Demo Feature 1 -->
+          <div class="bg-graphite-700 rounded-xl p-6 border border-graphite-600">
+            <h3 class="text-xl font-semibold mb-4">📅 Agendamento Online</h3>
+            <p class="text-graphite-400 mb-4">Veja como seus clientes podem agendar serviços 24/7 com nosso sistema intuitivo.</p>
+            <button @click="showDemoFeature('agendamento')" class="px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
+              Ver Demo de Agendamento
+            </button>
+          </div>
+
+          <!-- Demo Feature 2 -->
+          <div class="bg-graphite-700 rounded-xl p-6 border border-graphite-600">
+            <h3 class="text-xl font-semibold mb-4">📊 Dashboard de Gerenciamento</h3>
+            <p class="text-graphite-400 mb-4">Explore nosso painel de controle com relatórios e analytics em tempo real.</p>
+            <button @click="showDemoFeature('dashboard')" class="px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
+              Ver Demo de Dashboard
+            </button>
+          </div>
+
+          <!-- Demo Feature 3 -->
+          <div class="bg-graphite-700 rounded-xl p-6 border border-graphite-600">
+            <h3 class="text-xl font-semibold mb-4">💇‍♂︸ Gerenciamento de Clientes</h3>
+            <p class="text-graphite-400 mb-4">Descubra como gerenciar o histórico e preferências dos seus clientes.</p>
+            <button @click="showDemoFeature('crm')" class="px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
+              Ver Demo de CRM
+            </button>
+          </div>
+
+          <!-- Demo Feature 4 -->
+          <div class="bg-graphite-700 rounded-xl p-6 border border-graphite-600">
+            <h3 class="text-xl font-semibold mb-4">💰 Controle Financeiro</h3>
+            <p class="text-graphite-400 mb-4">Veja como acompanhar receitas, despesas e comissões de barbeiros.</p>
+            <button @click="showDemoFeature('financeiro')" class="px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
+              Ver Demo Financeiro
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-graphite-400 mb-4">Pronto para experimentar o BarberFlow na sua barbearia?</p>
+          <button @click="switchToRegisterFromDemo" class="inline-block px-8 py-4 bg-amber-glow-500 text-white rounded-lg font-semibold text-lg hover:bg-amber-glow-600 transition-colors transform hover:scale-105">
+            Começar Teste Grátis
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div v-if="showRegisterModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm">
+      <div class="relative w-full max-w-2xl mx-4 bg-graphite-800/90 backdrop-blur-sm rounded-2xl p-8 border border-graphite-700">
+        <button @click="closeRegisterModal" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-graphite-400 hover:text-neon-green-400 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold mb-4">Cadastre sua Barbearia</h2>
+          <p class="text-graphite-400">Comece seu teste grátis de 14 dias. Sem cartão de crédito necessário.</p>
+        </div>
+
+        <form @submit.prevent="handleRegister" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="registerName" class="block text-sm font-medium mb-2">Nome da Barbearia</label>
+              <input type="text" id="registerName" v-model="registerName"
+                     class="w-full px-4 py-3 bg-graphite-700 border border-graphite-600 rounded-lg focus:border-neon-green-500 focus:outline-none focus:ring-2 focus:ring-neon-green-500/20 transition-colors"
+                     placeholder="Ex: Premium Cuts">
+            </div>
+            <div>
+              <label for="registerEmail" class="block text-sm font-medium mb-2">Email</label>
+              <input type="email" id="registerEmail" v-model="registerEmail"
+                     class="w-full px-4 py-3 bg-graphite-700 border border-graphite-600 rounded-lg focus:border-neon-green-500 focus:outline-none focus:ring-2 focus:ring-neon-green-500/20 transition-colors"
+                     placeholder="seu@email.com">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="registerPhone" class="block text-sm font-medium mb-2">Telefone</label>
+              <input type="tel" id="registerPhone" v-model="registerPhone"
+                     class="w-full px-4 py-3 bg-graphite-700 border border-graphite-600 rounded-lg focus:border-neon-green-500 focus:outline-none focus:ring-2 focus:ring-neon-green-500/20 transition-colors"
+                     placeholder="(XX) XXXXX-XXXX">
+            </div>
+            <div>
+              <label for="registerPassword" class="block text-sm font-medium mb-2">Senha</label>
+              <input type="password" id="registerPassword" v-model="registerPassword"
+                     class="w-full px-4 py-3 bg-graphite-700 border border-graphite-600 rounded-lg focus:border-neon-green-500 focus:outline-none focus:ring-2 focus:ring-neon-green-500/20 transition-colors"
+                     placeholder="••••••••">
+            </div>
+          </div>
+
+          <div>
+            <label for="registerAddress" class="block text-sm font-medium mb-2">Endereço</label>
+            <input type="text" id="registerAddress" v-model="registerAddress"
+                   class="w-full px-4 py-3 bg-graphite-700 border border-graphite-600 rounded-lg focus:border-neon-green-500 focus:outline-none focus:ring-2 focus:ring-neon-green-500/20 transition-colors"
+                   placeholder="Rua, número, bairro, cidade">
+          </div>
+
+          <div>
+            <label for="registerPlan" class="block text-sm font-medium mb-2">Plano</label>
+            <select id="registerPlan" v-model="registerPlan"
+                    class="w-full px-4 py-3 bg-graphite-700 border border-graphite-600 rounded-lg focus:border-neon-green-500 focus:outline-none focus:ring-2 focus:ring-neon-green-500/20 transition-colors">
+              <option value="basic">Básico - R$99/mês</option>
+              <option value="pro" selected>Profissional - R$199/mês</option>
+              <option value="enterprise">Enterprise - R$399/mês</option>
+            </select>
+          </div>
+
+          <div class="flex items-center">
+            <input type="checkbox" id="registerTerms" v-model="registerTerms"
+                   class="w-4 h-4 text-neon-green-500 bg-graphite-700 border-graphite-600 rounded focus:ring-neon-green-500">
+            <label for="registerTerms" class="ml-2 text-sm text-graphite-400">
+              Eu aceito os <a href="#" class="text-neon-green-400 hover:underline">Termos de Serviço</a> e <a href="#" class="text-neon-green-400 hover:underline">Política de Privacidade</a>
+            </label>
+          </div>
+
+          <button type="submit"
+                  class="w-full px-6 py-4 bg-amber-glow-500 text-white rounded-lg font-semibold text-lg hover:bg-amber-glow-600 transition-colors transform hover:scale-105">
+            Começar Teste Grátis
+          </button>
+
+          <p class="text-center text-sm text-graphite-400">
+            Já tem uma conta? <button @click="switchToLogin" class="text-neon-green-400 hover:underline font-medium">Entre aqui</button>
+          </p>
+        </form>
+      </div>
+    </div>
 
     <!-- Features Section -->
     <section id="features" class="py-20 bg-graphite-900/30">
@@ -535,7 +744,7 @@
               </a>
               <a href="#" class="w-10 h-10 bg-graphite-800 rounded-full flex items-center justify-center hover:bg-neon-green-500 transition-colors">
                 <svg class="w-5 h-5 text-graphite-400 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                  <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
                 </svg>
               </a>
               <a href="#" class="w-10 h-10 bg-graphite-800 rounded-full flex items-center justify-center hover:bg-neon-green-500 transition-colors">
@@ -557,7 +766,141 @@
 
 <script>
 export default {
-  name: 'LandingPage'
+  name: 'LandingPage',
+  data() {
+    return {
+      showLoginModal: false,
+      showRegisterModal: false,
+      showDemoModal: false,
+      loginEmail: '',
+      loginPassword: '',
+      loginRemember: false,
+      registerName: '',
+      registerEmail: '',
+      registerPhone: '',
+      registerPassword: '',
+      registerAddress: '',
+      registerPlan: 'pro',
+      registerTerms: false
+    }
+  },
+  methods: {
+    openLoginModal() {
+      this.showRegisterModal = false;
+      this.showDemoModal = false;
+      setTimeout(() => {
+        this.showLoginModal = true;
+        document.body.style.overflow = 'hidden';
+      }, 100);
+    },
+    closeLoginModal() {
+      this.showLoginModal = false;
+      document.body.style.overflow = '';
+    },
+    openRegisterModal() {
+      this.showLoginModal = false;
+      this.showDemoModal = false;
+      setTimeout(() => {
+        this.showRegisterModal = true;
+        document.body.style.overflow = 'hidden';
+      }, 100);
+    },
+    closeRegisterModal() {
+      this.showRegisterModal = false;
+      document.body.style.overflow = '';
+    },
+    switchToRegister() {
+      this.closeLoginModal();
+      setTimeout(() => this.openRegisterModal(), 300);
+    },
+    switchToLogin() {
+      this.closeRegisterModal();
+      setTimeout(() => this.openLoginModal(), 300);
+    },
+    openDemoModal() {
+      this.showDemoModal = true;
+      this.showLoginModal = false;
+      this.showRegisterModal = false;
+      document.body.style.overflow = 'hidden';
+    },
+    closeDemoModal() {
+      this.showDemoModal = false;
+      document.body.style.overflow = '';
+    },
+    switchToRegisterFromDemo() {
+      this.closeDemoModal();
+      this.openRegisterModal();
+    },
+    showDemoFeature(feature) {
+      alert(`Demo feature: ${feature} would be shown here`);
+      // Here you would typically show a specific demo feature
+      console.log(`Showing demo feature: ${feature}`);
+    },
+    async handleLogin() {
+      try {
+        const response = await fetch('http://localhost:3003/api/auth/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: this.loginEmail,
+            password: this.loginPassword
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          // Login successful
+          localStorage.setItem('token', data.token);
+          localStorage.setItem('barbershop', JSON.stringify(data.data.barbershop));
+          alert('Login successful! Redirecting to dashboard...');
+          // Redirect to dashboard using router
+          this.$router.push('/dashboard');
+        } else {
+          // Login failed
+          alert(`Login failed: ${data.message || 'Invalid credentials'}`);
+        }
+      } catch (error) {
+        console.error('Login error:', error);
+        alert('An error occurred during login. Please try again.');
+      }
+    },
+    async handleRegister() {
+      try {
+        const response = await fetch('http://localhost:3003/api/auth/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: this.registerName,
+            email: this.registerEmail,
+            phone: this.registerPhone,
+            password: this.registerPassword,
+            address: this.registerAddress
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          // Registration successful
+          alert('Registration successful! Please login.');
+          this.closeRegisterModal();
+          this.openLoginModal();
+        } else {
+          // Registration failed
+          const errorMessage = data.message || data.errors?.[0]?.message || 'Registration failed';
+          alert(`Registration failed: ${errorMessage}`);
+        }
+      } catch (error) {
+        console.error('Registration error:', error);
+        alert('An error occurred during registration. Please try again.');
+      }
+    }
+  }
 }
 </script>
 
@@ -599,5 +942,61 @@ export default {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #4d4d4d;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 767px) {
+  .mobile-nav-spacing {
+    margin-bottom: 2rem;
+  }
+
+  .mobile-hero-padding {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .mobile-text-smaller {
+    font-size: 1.5rem;
+  }
+
+  .mobile-buttons-smaller {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Modal fixes for mobile */
+  .fixed.inset-0 {
+    overflow-y: auto;
+  }
+
+  /* Ensure modals are scrollable on mobile */
+  div[class*="max-w-"] {
+    max-height: 90vh;
+    overflow-y: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Better spacing for modal close buttons */
+  .absolute.top-4.right-4 {
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+  }
+
+  /* Fix modal content padding on mobile */
+  .rounded-2xl.p-8 {
+    padding: 1.5rem;
+  }
+
+  /* Make modal forms more compact on mobile */
+  .space-y-6 {
+    space-y: 1rem;
+  }
+
+  /* Fix grid layout on mobile */
+  .grid.md\\:grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

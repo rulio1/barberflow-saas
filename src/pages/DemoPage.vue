@@ -50,36 +50,36 @@
             <div class="bg-graphite-700 rounded-xl p-6 border border-graphite-600">
               <h3 class="text-xl font-semibold mb-4">📅 Agendamento Online</h3>
               <p class="text-graphite-400 mb-4">Veja como seus clientes podem agendar serviços 24/7 com nosso sistema intuitivo.</p>
-              <button class="px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
+              <router-link to="/demo/agendamento" class="inline-block px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
                 Ver Demo de Agendamento
-              </button>
+              </router-link>
             </div>
 
             <!-- Demo Feature 2 -->
             <div class="bg-graphite-700 rounded-xl p-6 border border-graphite-600">
               <h3 class="text-xl font-semibold mb-4">📊 Dashboard de Gerenciamento</h3>
               <p class="text-graphite-400 mb-4">Explore nosso painel de controle com relatórios e analytics em tempo real.</p>
-              <button class="px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
+              <router-link to="/demo/dashboard" class="inline-block px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
                 Ver Demo de Dashboard
-              </button>
+              </router-link>
             </div>
 
             <!-- Demo Feature 3 -->
             <div class="bg-graphite-700 rounded-xl p-6 border border-graphite-600">
               <h3 class="text-xl font-semibold mb-4">💇‍♂️ Gerenciamento de Clientes</h3>
               <p class="text-graphite-400 mb-4">Descubra como gerenciar o histórico e preferências dos seus clientes.</p>
-              <button class="px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
+              <router-link to="/demo/crm" class="inline-block px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
                 Ver Demo de CRM
-              </button>
+              </router-link>
             </div>
 
             <!-- Demo Feature 4 -->
             <div class="bg-graphite-700 rounded-xl p-6 border border-graphite-600">
               <h3 class="text-xl font-semibold mb-4">💰 Controle Financeiro</h3>
               <p class="text-graphite-400 mb-4">Veja como acompanhar receitas, despesas e comissões de barbeiros.</p>
-              <button class="px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
+              <router-link to="/demo/financeiro" class="inline-block px-4 py-2 bg-amber-glow-500 text-white rounded-lg font-medium hover:bg-amber-glow-600 transition-colors">
                 Ver Demo Financeiro
-              </button>
+              </router-link>
             </div>
           </div>
 
